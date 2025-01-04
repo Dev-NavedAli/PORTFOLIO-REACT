@@ -1,9 +1,9 @@
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col lg:flex-row relative">
-      <div className="w-full lg:w-[35%] bg-[#F56539] p-6 flex flex-col justify-between">
+    <section id="home" className="min-h-screen flex flex-col lg:flex-row md:flex-row  sm:flex-row relative">
+      <div className="lg:w-[35%] md:w-[35%] bg-[#F56539] p-6 flex flex-col justify-between">
         <div className="mt-10">
-          <h1  className="name text-6xl  text-black">
+          <h1  className="name  text-4xl lg:text-5xl md:text-4xl sm:text-4xl  text-black">
             naved khan
           </h1>
         </div>
@@ -21,9 +21,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute left-[30%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <div className="relative w-40 h-40 lg:w-56 lg:h-56">
-          <div className= " h-[420px] w-[420px] absolute -left-3 -top-20 rounded-full overflow-hidden  shadow-lg">
+      <div className="absolute lg:left-[30%] sm:left-[35%] md:left-[30%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="relative w-40 h-40 lg:w-56 lg:h-56 md:w-56 md:h-56 sm:w-56 sm:h-56 lg:bottom-0 lg:left-0 md:bottom-0 md:left-0  sm:bottom-0 sm:left-0  bottom-40 left-36 ">
+          <div className= "md:h-[250px] md:w-[250px] lg:h-[350px] lg:w-[350px] xl:w-[400px] xl:h-[400px]  absolute  md:-left-3 md:-top-20 rounded-full sm:-top-[-15px]  overflow-hidden  shadow-lg">
             <img
               src="https://avatars.githubusercontent.com/u/113710115?v=4"
               alt="Profile"
@@ -33,11 +33,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-[65%] bg-zinc-900 p-6 flex flex-col justify-center items-end">
+      <div className="lg:w-[65%] md:w-[65%] bg-zinc-900 p-6 flex flex-col justify-center items-end">
         <div className="max-w-2xl mx-auto lg:ml-24 text-left pt-24 lg:pt-0">
-          <div className="space-y-4 ml-[50%] w-full ">
+          <div className="space-y-4 lg:ml-[50%] md:ml-[40%] sm:ml-[20%]  ">
             <p className="text-white">Full Stack Web Developer</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Naved Ali Khan</h1>
+            <h1 className="text-4xl md:text-4xl font-bold text-white w-full">Naved Ali Khan</h1>
             <p className="text-zinc-400 max-w-lg text-xl">
               A confident, passionate, determined, and self-taught individual, seeking various opportunities to explore and research in the area of computer science.
             </p>
@@ -52,8 +52,15 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section> 
+
+  )
 };
 
 export default Hero;
+
+
+
+
+
+
