@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const Skills = () => {
   return (
-    <section className='min-h-screen bg-zinc-900'>
+    <section className='bg-zinc-900'>
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8' >
         <div className='w-full h-1 bg-[#FF7051] mx-auto'></div>
         <h1 className='text-6xl font-bold text-[#FF7051] mt-8 text-center'>Skills</h1>
