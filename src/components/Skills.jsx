@@ -1,49 +1,101 @@
+import React from 'react'
+import { assets } from '../assets/assets'
+
 const Skills = () => {
-  const skills = [
-    { name: 'HTML5', level: 90 },
-    { name: 'CSS3', level: 85 },
-    { name: 'JavaScript', level: 88 },
-    { name: 'React.js', level: 85 },
-    { name: 'Next.js', level: 80 },
-    { name: 'Node.js', level: 75 },
-    { name: 'TypeScript', level: 82 },
-    { name: 'Tailwind CSS', level: 88 },
-  ];
-
   return (
-    <section id="skills" className="py-20 bg-zinc-800 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Skills</h2>
-          <div className="w-20 h-1 bg-[#FF7051] mx-auto"></div>
+    <section className='min-h-screen bg-zinc-900'>
+      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8' >
+        <div className='w-full h-1 bg-[#FF7051] mx-auto'></div>
+        <h1 className='text-6xl font-bold text-[#FF7051] mt-8 text-center'>Skills</h1>
+      </div>
+      <div className="animate-scroll cards flex mt-10">
+        <div className="flex flex-shrink-0   justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.html} alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >HTML</p>
+          </div>
         </div>
-
-        <div className="relative">
-          <div className="skill-track flex animate-skill-scroll">
-            {[...skills, ...skills].map((skill, index) => (
-              <div
-                key={`${skill.name}-${index}`}
-                className="w-64 flex-shrink-0 bg-zinc-900 border-none mx-4 p-6 rounded-lg"
-              >
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-white mb-2">{skill.name}</h3>
-                  <div className="relative pt-1">
-                    <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-zinc-700">
-                      <div
-                        style={{ width: `${skill.level}%` }}
-                        className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#FF7051]"
-                      ></div>
-                    </div>
-                  </div>
-                  <p className="text-[#FF7051] font-medium">{skill.level}%</p>
-                </div>
-              </div>
-            ))}
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.css} alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >CSS</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.javascript} className='ml-4' alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >JAVASCRIPT</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.bootstrap} className='ml-4' alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4  ' >BOOTSTRAP</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.tailwind} alt="" className=' mb-2' />
+            <p className='text-center p-2 text-white font-bold ' >TAILWIND</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.react} alt="" />
+            <p className='text-center p-2 text-white font-bold  mt-4 ' >REACT</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.git} alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >GIT</p>
+          </div>
+        </div>
+        <div className="flex  flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.github} alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >GITHUB</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.mongodb} alt="" />
+            <p className='text-center p-2 text-white font-bold ' >MONGODB</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.mysql} alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >MYSQL</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.node} alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >NODE</p>
+          </div>
+        </div>
+        <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+          <div >
+            <img src={assets.express} className='w-[65px]'  alt="" />
+            <p className='text-center p-2 text-white font-bold mt-4 ' >EXPRESS</p>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
 
-export default Skills;
+      <style>{`
+        .animate-scroll {
+          display: flex;
+          animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+      `}</style>
+
+    </section>
+  )
+}
+
+export default Skills
