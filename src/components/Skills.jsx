@@ -8,7 +8,7 @@ const Skills = () => {
         <div className='w-full h-1 bg-[#FF7051] mx-auto'></div>
         <h1 className='text-6xl font-bold text-[#FF7051] mt-8 text-center'>Skills</h1>
       </div>
-      <marquee className="cards  mt-10 " behavior="scroll" direction="left">
+      <marquee className="cards  mt-10 " behavior="scroll" direction="left" scrollamount="15" >
         <div className='flex p-2 '>
           <div className="flex flex-shrink-0   justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_20px_rgba(245,101,57,0.3)] bg-zinc-800 ">
             <div >
@@ -82,21 +82,21 @@ const Skills = () => {
               <p className='text-center p-2 text-white font-bold mt-4 ' >EXPRESS</p>
             </div>
           </div>
+          <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+            <div >
+              <img src={assets.cicd} className='w-[65px]' alt="" />
+              <p className='text-center p-2 text-white font-bold mt-4 ' >CI/CD</p>
+            </div>
+          </div>
+          <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
+            <div >
+              <img src={assets.python} className='w-[65px]' alt="" />
+              <p className='text-center p-2 text-white font-bold mt-4 ' >CI/CD</p>
+            </div>
+          </div>
         </div>
 
       </marquee>
-
-      <style>{`
-        .animate-scroll {
-          display: flex;
-          animation: scroll 10s linear infinite;
-        }
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-100%); }
-        }
-      `}</style>
-
     </section>
   )
 }

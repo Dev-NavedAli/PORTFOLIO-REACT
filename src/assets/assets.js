@@ -12,9 +12,21 @@ import mongodb from "./mongodb.png";
 import mysql from "./mysql.png";
 import node from "./node-js.png";
 import express from "./Express-js.png";
+import python from "./python.png";
+import ecommerce from "./Ecommerce checkout laptop-cuate.svg"
+import doctor from "./Doctors-cuate.svg"
+import hospital from "./Hospital room-bro.svg"
+import play from "./play-button.png"
+import code from "./code.png"
+
 
 export const assets = {
   graduationIcon,
+  play,
+  code,
+  ecommerce,
+  doctor,
+  hospital,
   cicd,
   html,
   css,
@@ -28,4 +40,5 @@ export const assets = {
   mysql,
   node,
   express,
+  python,
 };
