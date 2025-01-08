@@ -91,7 +91,7 @@ const Skills = () => {
           <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
             <div >
               <img src={assets.python} className='w-[65px]' alt="" />
-              <p className='text-center p-2 text-white font-bold mt-4 ' >CI/CD</p>
+              <p className='text-center p-2 text-white font-bold mt-4 ' >PYTHON</p>
             </div>
           </div>
         </div>
