@@ -8,9 +8,7 @@ const Project = () => {
         <div>
           <h1 className='text-center text-6xl font-bold text-[#FF7051]'>Projects</h1>
         </div>
-        <div className="flex flex-row items-center justify-around mt-8 ">
-
-
+        <div className="flex flex-col gap-y-4 lg:flex-row items-center justify-around mt-8 ">
           <div className='bg-[#FF7051] h-[360px] w-[304px] rounded-lg'>
             <p className='font-bold text-2xl text-white mt-4 text-center' >ECOMMERCE-APP</p>
             <img src={assets.ecommerce} className='mt-8' alt="" />
