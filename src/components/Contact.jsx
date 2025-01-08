@@ -1,98 +1,74 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React from 'react'
+import { assets } from '../assets/assets'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-  };
-
   return (
-    <section id="contact" className="py-20 bg-zinc-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Contact</h2>
-          <div className="w-20 h-1 bg-[#FF7051] mx-auto"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-[#FF7051] rounded-lg">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
+    <section className='bg-zinc-900 max-h-[800px] '>
+      <div className='max-w-6xl mx-auto'><br /> {/* First div */}
+        <h1 className='text-6xl font-bold text-[#FF7051] mt-8'>Contacts</h1>
+        <div className='grid grid-cols-[1fr_1fr_1fr] mt-8' >
+          <div className='form'>
+            <form className='bg-zinc-900   '>
               <div>
-                <h3 className="text-lg font-semibold text-white">Email</h3>
-                <p className="text-zinc-400">contact@example.com</p>
+                <p htmlFor="name" className='text-[#FF7051] text-xl font-bold'>Name</p>
+                <input type="text" id="name" placeholder='john doe' className='bg-zinc-900  text-white text-lg  rounded-md w-[90%] px-3 py-2  mt-4 border-2 border-[#FF7051]  ' />
+              </div>
+              <div className='mt-4'>
+                <p htmlFor="email" className='text-[#FF7051] text-xl font-bold'>Email</p>
+                <input type="email" id="name" placeholder='johndoe@gmail.com' className='bg-zinc-900 text-white text-lg  rounded-md w-[90%] px-3 py-2   mt-4  border-2 border-[#FF7051] ' />
+              </div>
+              <div className='mt-4'>
+                <p name="message" className='text-[#FF7051] text-xl font-bold  ' >Message</p>
+                <textarea id='message' rows={6} placeholder='Type your message.....' className='bg-zinc-900 text-white text-xl rounded-md w-[90%] px-3 py-2  mt-4  border-2 border-[#FF7051]' >
+                </textarea>
+              </div>
+              <button className='bg-[#FF7051] rounded-lg border-none w-[100px] h-[40px] text-white font-medium mt-4 mb-2' >Send</button>
+            </form>
+          </div>
+          <div >     {/* Second div */}
+            <div className='flex lg:flex-col gap-y-8 ml-4 mt-8'>
+              <div className='flex items-center  '>
+                <div><img src={assets.mail} alt="" /></div>
+                <div className='ml-2 text-lg font-bold text-white'><p>nomanali50997@gmail.com</p></div>
+              </div>
+              <div className='flex items-center'>
+                <div><img src={assets.gps} alt="" /></div>
+                <div className='ml-3 text-lg font-bold text-white' ><p>Bareilly, India</p></div>
+              </div>
+              <div className='flex items-center'>
+                <div><img src={assets.phone} alt="" /></div>
+                <div className='ml-2 text-lg font-bold text-white'><p>+91 8077669812</p></div>
+              </div>
+            </div>
+            <div>
+              <div className=" hidden sm:flex gap-8 ml-8 mt-16 text-white/90 mb-8">
+                <a href="https://linkedin.com">
+                  <i className="fa-brands fa-linkedin transform transition-all duration-500 hover:scale-110" style={{ color: "#FF7051", fontSize: "40px" }} ></i>
+                </a>
+
+                <a href="https://github.com">
+                  <i className="fa-brands fa-github transform transition-all duration-500 hover:scale-110 " style={{ color: "#FF7051", fontSize: "40px" }} ></i>
+                </a>
+                <a href="https://blog.com">
+                  <i className="fa-brands fa-instagram transform transition-all duration-500 hover:scale-110" style={{ color: "#FF7051", fontSize: "40px" }} ></i>
+                </a>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-[#FF7051] rounded-lg">
-                <Phone className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white">Phone</h3>
-                <p className="text-zinc-400">+1 234 567 890</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-[#FF7051] rounded-lg">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white">Location</h3>
-                <p className="text-zinc-400">New York, USA</p>
-              </div>
+          </div>
+          <div>   {/* Third Div */}
+            <div className='relative  h-full '>
+              <div className='h-[150px] w-[150px] absolute top-4 ' ><img src={assets.message} alt="" /></div>
+              <div className='h-[150px] w-[150px] absolute  left-12 top-28 '><img src={assets.notes} alt="" /></div>
+              <div><img  className='h-[350px] w-[350px] absolute top-40 ' src={assets.devices} alt="" /></div>
             </div>
           </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full bg-zinc-800 border border-zinc-700 text-white p-3 rounded"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full bg-zinc-800 border border-zinc-700 text-white p-3 rounded"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              />
-            </div>
-            <div>
-              <textarea
-                placeholder="Your Message"
-                className="w-full bg-zinc-800 border border-zinc-700 text-white p-3 rounded min-h-[150px]"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-[#FF7051] text-white py-3 rounded hover:bg-[#FF7051]/90 transition"
-            >
-              Send Message
-            </button>
-          </form>
         </div>
+
+
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

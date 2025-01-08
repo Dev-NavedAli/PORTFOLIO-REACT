@@ -13,15 +13,26 @@ import mysql from "./mysql.png";
 import node from "./node-js.png";
 import express from "./Express-js.png";
 import python from "./python.png";
-import ecommerce from "./Ecommerce checkout laptop-cuate.svg"
-import doctor from "./Doctors-cuate.svg"
-import hospital from "./Hospital room-bro.svg"
-import play from "./play-button.png"
-import code from "./code.png"
-
+import ecommerce from "./Ecommerce checkout laptop-cuate.svg";
+import doctor from "./Doctors-cuate.svg";
+import hospital from "./Hospital room-bro.svg";
+import play from "./play-button.png";
+import code from "./code.png";
+import mail from "./mail.png";
+import gps from "./gps.png";
+import phone from "./telephone.png";
+import message from "./Messages-bro.svg";
+import devices from "./Devices-bro.svg";
+import notes from "./Notes-bro.svg";
 
 export const assets = {
   graduationIcon,
+  message,
+  devices,
+  notes,
+  mail,
+  phone,
+  gps,
   play,
   code,
   ecommerce,
