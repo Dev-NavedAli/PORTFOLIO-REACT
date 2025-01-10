@@ -24,9 +24,11 @@ import phone from "./telephone.png";
 import message from "./Messages-bro.svg";
 import devices from "./Devices-bro.svg";
 import notes from "./Notes-bro.svg";
+import heart from "./heart.png"
 
 export const assets = {
   graduationIcon,
+  heart,
   message,
   devices,
   notes,

@@ -63,6 +63,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <p className='text-xl font-bold text-zinc-200 text-center' >
+        Made with <span><img src={assets.heart} className='inline' alt="" /> </span> by Naved Ali Khan</p>
     </section>
   )
 }
