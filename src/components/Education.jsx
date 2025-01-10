@@ -59,7 +59,7 @@ function Education() {
                         </div>
                     </div>
                     <div>
-                        <img className="w-96 h-96 sm:ml-12 mb-8"
+                        <img className="w-96 h-96 sm:ml-6 mb-8"
                             src="https://sunidhi-singh.netlify.app/static/media/eduOrange.c61dcfc316d381d83890e24aabcbfb95.svg" alt="" />
                     </div>
                 </div>
