@@ -1,7 +1,14 @@
 import React from "react"
 import { assets } from "../assets/assets.js"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 
 function Education() {
+
+
+
+    
+
     return (
         <div className="bg-zinc-900">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" >

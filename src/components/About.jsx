@@ -1,4 +1,21 @@
+import React from  "react"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
 const About = () => {
+
+const divRef = useRef();
+
+useGSAP(()=>{
+  gsap.from(divRef.current,{
+    y:100,
+    opacity:0,
+    delay:1,
+    duration:1,
+  })
+})
+
   return (
     <section id="about" className="py-20 bg-zinc-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -8,7 +25,7 @@ const About = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-row space-y-6 text-zinc-400  text-xl sm:text-2xl">
-            <div className="mt-4">
+            <div ref={divRef} className="mt-4">
               <p>
                 Hello! I'm a passionate Full Stack web developer with a strong foundation in modern web technologies.
                 My journey in web development started with self-learning and has evolved into creating
