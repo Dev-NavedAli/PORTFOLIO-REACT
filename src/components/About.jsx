@@ -1,20 +1,28 @@
-import React from  "react"
+import React, { useRef } from  "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)  
 
 const About = () => {
-
-const divRef = useRef();
-
+const divRef  = useRef()
 useGSAP(()=>{
-  gsap.from(divRef.current,{
-    y:100,
-    opacity:0,
-    delay:1,
-    duration:1,
+  gsap.from(divRef.current, {
+    y: 100,
+    opacity: 0,
+    delay: 0.5,
+    duration: 1,
+    scrollTrigger: {
+      trigger: divRef.current,
+      scroller: "body",
+      start: "top 80%",
+      end: "bottom 60%",
+      markers: true,
+    }
   })
-})
+});
+
 
   return (
     <section id="about" className="py-20 bg-zinc-900">
