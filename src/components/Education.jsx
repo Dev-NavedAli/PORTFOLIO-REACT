@@ -14,7 +14,7 @@ const Education = () => {
    useGSAP(()=>{
     gsap.from(divRef.current,{
         y: 100,
-        opacity: 0,
+        opacity: 0, 
         delay: 0.5,
         duration: 1,
         scrollTrigger:{
