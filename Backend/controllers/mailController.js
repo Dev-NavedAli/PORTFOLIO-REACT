@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
-
+dotenv.config()
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -15,16 +16,16 @@ const sendMail = (req,res)=>{
 
     const mailOptions = {
         from:email,
-        to:process.env.EMAIL_USER,
-        subject: `PORTFOLIO CONTACT  name:${name}`,
-        message:message
+        to:process.env.EMAIL_RECIPIENT,
+        subject:`Message form ${name}`,
+        text:`Name:${name}\n Email:${email}\n Message:${message}`
     }
 
     transporter.sendMail(mailOptions,(error,info)=>{
         if(error){
             console.log(error);  
         }else{
-            console.log('Mail send succesfully');
+            console.log(`Mail send succesfully`);
             res.redirect('/')
         }
     })

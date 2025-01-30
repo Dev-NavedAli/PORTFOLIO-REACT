@@ -3,4 +3,6 @@ import { sendMail } from "../controllers/mailController.js"
 
 const mailRouter = express.Router()
 
-mailRouter.post("/sned-mail",sendMail)
+mailRouter.post("/send-mail",sendMail)
+
+export default mailRouter;
