@@ -25,8 +25,8 @@ const sendMail = (req,res)=>{
         if(error){
             console.log(error);  
         }else{
+            res.json({success:true,message:`Mail send succesfully`})
             console.log(`Mail send succesfully`);
-            res.redirect('/')
         }
     })
 }
