@@ -70,7 +70,7 @@ const Hero = () => {
               A confident, passionate, determined, and self-taught individual, seeking various opportunities to explore and research in the area of computer science.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <a href="/cv.pdf" className="border border-[#F56539] text-[#FF7051] px-4 py-2 rounded hover:bg-[#F56539] hover:text-white transition">
+              <a href="/Naved.pdf" className="border border-[#F56539] text-[#FF7051] px-4 py-2 rounded hover:bg-[#F56539] hover:text-white transition">
                 Download CV
               </a>
               <a href="#contact" className="bg-[#F56539] text-white px-4 py-2 rounded hover:bg-[#F56539]/90 transition">

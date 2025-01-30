@@ -20,7 +20,7 @@ const Education = () => {
             scrollTrigger: {
                 scroller: "body",
                 trigger: divRef.current,
-                start: "top 50%",
+                start: "top 70%",
                 end: "bottom 30%",
             }
         })
