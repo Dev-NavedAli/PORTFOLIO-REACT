@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { assets } from '../assets/assets';
+import {toast } from 'react-toastify';
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -13,8 +14,8 @@ const Contact = () => {
       if (name && email && message) {
         const { data } = await axios.post(import.meta.env.VITE_BACKEND_URL + '/mail/send-mail', { name, email, message });
         if (data.success) {
-          alert(data.message); // Show a success message to the user
-          setName(""); // Clear the form fields
+          toast.success("Mail sent Succesfully")
+          setName(""); 
           setEmail("");
           setMessage("");
         }
