@@ -13,7 +13,7 @@ app.use(express.json());
 
 const allowedOrigins = [
   "https://portfolio-react-frontend-five.vercel.app",
-  "https://ecommerce-admin-six-sage.vercel.app", // Replace with your second URL
+  "https://portfolio-react-backend.vercel.app/mail/send-mail", // Replace with your second URL
 ];
 
 const corsOptions = {
