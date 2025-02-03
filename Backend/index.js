@@ -16,7 +16,7 @@ const allowedOrigins = [
   "https://portfolio-react-backend.vercel.app/mail/send-mail", // Replace with your second URL
 ];
 
-const corsOptions = {
+const corsOptions = {   
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true); // Allow the request
