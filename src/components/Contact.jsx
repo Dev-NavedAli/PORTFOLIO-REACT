@@ -30,7 +30,7 @@ const Contact = () => {
     <section className='bg-zinc-900 max-h-[800px]'>
       <div className='max-w-6xl mx-auto'>
         <br />
-        <h1 className='text-6xl font-bold text-[#2f1009] mt-8'>Contacts</h1>
+        <h1 className='text-6xl font-bold text-[#FF7051] mt-8'>Contacts</h1>
         <div className='grid md:grid-cols-[1fr_1fr_1fr] mt-8'>
           <div className='form'>
             <form onSubmit={onSubmitHandler} className='bg-zinc-900'>
