@@ -16,7 +16,7 @@ app.use(
     origin: "*", // Allows requests from any URL
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow all HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allow necessary headers
-  })
+  })  
 );
 
 // Handle preflight requests explicitly
