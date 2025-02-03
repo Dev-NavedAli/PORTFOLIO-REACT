@@ -14,11 +14,12 @@ const port = 3000
 app.use(express.json())
 app.use(
     cors({
-        origin: "https://portfolio-react-frontend-five.vercel.app",
-        methods: "POST",
-        allowedHeaders: ["Content-Type"],
+        origin: "*", // Allows requests from any URL
+        methods: ["GET", "POST", "PUT", "DELETE"], // Adjust as needed
+        allowedHeaders: ["Content-Type", "Authorization"], // Ensure proper headers are allowed
     })
 );
+
 
 app.get("/",(req,res)=>{
     res.send("Api working fabulous")
