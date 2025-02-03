@@ -11,22 +11,16 @@ const port = 3000;
 
 app.use(express.json());
 
-const allowedOrigins = [
-  "https://portfolio-react-frontend-five.vercel.app",
-  "https://portfolio-react-backend.vercel.app/mail/send-mail", // Replace with your second URL
-];
+app.use(
+  cors({
+    origin: "*", // Allows requests from any URL
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow all HTTP methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Allow necessary headers
+  })
+);
 
-const corsOptions = {   
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true); // Allow the request
-    } else {
-      callback(new Error("Not allowed by CORS")); // Reject the request
-    }
-  },
-};
-
-app.use(cors(corsOptions));
+// Handle preflight requests explicitly
+app.options("*", cors());
 
 app.get("/", (req, res) => {
   res.send("Api working fabulous");
