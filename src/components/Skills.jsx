@@ -25,7 +25,7 @@ const Skills = () => {
           <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
             <div >
               <img src={assets.javascript} className='ml-4' alt="" />
-              <p className='text-center p-2 text-white font-bold mt-4 ' >JAVASCRIPT</p>
+              <p className='text-center p-2 text-white font-bold mt-4 ' >JAVASCRIPT.</p>
             </div>
           </div>
           <div className="flex flex-shrink-0  justify-center items-center  ml-8 card w-[160px] h-[160px] rounded-lg shadow-[0_0_30px_rgba(245,101,57,0.3)] bg-zinc-800 ">
